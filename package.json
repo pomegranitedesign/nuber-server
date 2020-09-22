@@ -1,0 +1,7 @@
+{
+  "name": "nuber-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dmitriy Shin",
+  "license": "MIT"
+}
