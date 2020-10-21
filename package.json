@@ -3,5 +3,37 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Dmitriy Shin",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts",
+    "migrate": "node-pg-migrate"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/helmet": "^0.0.48",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.11.2",
+    "graphql-merge": "^0.0.1",
+    "graphql-to-typescript": "^0.1.2",
+    "nodemon": "^2.0.4",
+    "pg-types": "^3.0.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "cors": "^2.8.5",
+    "gql-merge": "^0.0.6",
+    "graphql-tools": "^6.2.3",
+    "graphql-yoga": "^1.18.3",
+    "helmet": "^4.1.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "morgan": "^1.10.0",
+    "node-pg-migrate": "^5.8.1",
+    "pg": "^8.4.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typeorm": "^0.2.28"
+  }
 }
