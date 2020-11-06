@@ -1,0 +1,27 @@
+type User {
+  id: ID!
+  fbId: String
+  chat: Chat
+  email: String!
+  firstName: String!
+  lastName: String!
+  age: Int
+  password: String
+  phoneNumber: String
+  profilePhoto: String
+  updatedAt: String
+  createdAt: String!
+  isEmailVerified: Boolean!
+  isPhoneVerified: Boolean!
+  isDriving: Boolean!
+  isRiding: Boolean!
+  isTaken: Boolean!
+  fullName: String
+  lastLng: Float!
+  lastLat: Float!
+  lastOrientation: Float
+  messages: [Message]
+  verifications: [Verification]
+  rideAsPassenger: [Ride]
+  rideAsDriver: [Driver]
+}
